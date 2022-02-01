@@ -89,3 +89,5 @@ new_names <- sapply(names(fdt)[3:length(names(fdt))], function(x) paste(x, "_smr
 new_names <- c(names(fdt)[1], names(fdt)[2], new_names)
 names(fdt) <- new_names
 names(fdt)
+
+write.table(fdt, row.names = FALSE, file = "./summarized_dataset.txt")
